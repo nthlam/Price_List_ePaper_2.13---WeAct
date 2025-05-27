@@ -4,6 +4,9 @@ Dự án này sử dụng ESP32 để tạo một web server cho phép người 
 ## Ứng dụng: Bảng giá siêu tiết kiệm năng lượng
 E-paper chỉ cần kết nối esp32 khi cần thay đổi nội dung, không cần cấp năng lượng duy trì.
 
+Ảnh:
+Video:
+
 ## 🚀 Tính năng
 
 - ESP32 hoạt động như một **Access Point** hoặc **kết nối WiFi**.
@@ -29,4 +32,4 @@ E-paper chỉ cần kết nối esp32 khi cần thay đổi nội dung, không c
 ### 2. Clone dự án
 
 ```bash
-git clone https://github.com/yourusername/esp32-epaper-web.git
+git clone git clone https://nthlam/Price_List_ePaper_2.13---WeAct.git
