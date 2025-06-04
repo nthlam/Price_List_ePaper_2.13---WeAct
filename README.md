@@ -33,3 +33,24 @@ Video:
 
 ```bash
 git clone git clone https://nthlam/Price_List_ePaper_2.13---WeAct.git
+```
+![Ảnh mô tả](assets/schematic.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
