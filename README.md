@@ -34,11 +34,26 @@ Video:
 ```bash
 git clone git clone https://nthlam/Price_List_ePaper_2.13---WeAct.git
 ```
+### 3. Lắp mạch ep32 <-> epaper
 ![Ảnh mô tả](assets/schematic.png)
 
+### 4. Cấu hình wifi 
+const char* ssid = "ESP32-Access-Point";
+const char* password = "12345678";
 
-
-
+### 5. Cài đặt template
+5.1: Scale ảnh
+Dùng tool sau để scale về tỉ lệ 250x122 vẫn giữ nguyên tất cả thông tin trên ảnh:
+https://www.irfanview.com/
+- image/resize:
+  ![Ảnh 1](assets/irfran_1(1).png)
+- chỉnh width hoặc height (cạnh còn lại tính auto)
+  ![Ảnh 2](assets/schematic.png)
+5.2: chuyển ảnh sang bitmap
+Dùng tool: tải lcd-image-converter.zip
+-> giải nén -> mở file .exe
+-> open ảnh
+static const uint8_t image_data_vinmart[3050]  = {}
 
 
 
