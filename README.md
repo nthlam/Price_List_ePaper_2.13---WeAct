@@ -76,6 +76,7 @@ void capnhat(String text, int x, int y, int ngang, int doc){
   } while (display.nextPage());
 }
 
+```cpp
 *note:
 // chỉ cập nhật 1 phần màn hình:
 display.setPartialWindow(x, y, ngang, doc);
