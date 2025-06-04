@@ -38,44 +38,34 @@ git clone git clone https://nthlam/Price_List_ePaper_2.13---WeAct.git
 ![Ảnh mô tả](assets/schematic.png)
 
 ### 4. Cấu hình wifi 
-const char* ssid = "ESP32-Access-Point";
+const char* ssid = "ESP32-Access-Point";  
 const char* password = "12345678";
 
 ### 5. Cài đặt template
 5.1: Scale ảnh
 Dùng tool sau để scale về tỉ lệ 250x122 vẫn giữ nguyên tất cả thông tin trên ảnh:
 https://www.irfanview.com/
-- image/resize:
+- image/resize:  
   ![Ảnh 1](assets/irfran_1(1).png)
-- chỉnh width hoặc height (cạnh còn lại tính auto)
+- chỉnh width hoặc height (cạnh còn lại tính auto)  
   ![Ảnh 2](assets/schematic.png)
-5.2: chuyển ảnh sang bitmap
-Dùng tool: tải lcd-image-converter.zip
--> giải nén -> mở file .exe
--> open ảnh
-  - -> images/resize để crop ảnh
-  - file/convert chọn save as: *.c để lưu bitmap
-    ![Ảnh convert](assets/convert.png)
-  -> lấy phần bit map có cấu trúc như bên dưới paste vào code
-static const uint8_t image_data_vinmart[3050]  = {}
-*note:  display.drawBitmap(10, 0, image_data_vinmart, 200, 122, GxEPD_RED);
-=> GxEDP_RED nghĩa là những bit 1 trong bitmap sẽ có màu đỏ
+<br>
+5.2: Chuyển ảnh sang bitmap
+  Tải lcd-image-converter.zip<br>
+-> giải nén -> mở file .exe-> open ảnh<br>
+  - images/resize để crop ảnh  
+  - file/convert chọn save as: *.c để lưu bitmap<br>
+    ![Ảnh convert](assets/convert.png)  
+  -> lấy phần bit map có cấu trúc như bên dưới paste vào code<br>
+
+```cpp static const uint8_t image_data_vinmart[3050]  = {} ```
+```cpp
+display.drawBitmap(10, 0, image_data_vinmart, 200, 122, GxEPD_RED);
+/*=> GxEDP_RED nghĩa là những bit 1 trong bitmap sẽ có màu đỏ
 vị trí con trỏ bắt đầu in: (10,0)
-kích cỡ ảnh sẽ in: (200,122)
-
+kích cỡ ảnh sẽ in: (200,122)*/
+```
 ### 6. Chỉnh sửa tùy chọn:
-
-void capnhat(String text, int x, int y, int ngang, int doc){
-  display.setPartialWindow(x, y, ngang, doc);
-  display.firstPage();
-  do {
-    display.setFont(&FreeMonoBold9pt7b);
-    display.setTextColor(GxEPD_BLACK);
-    display.setCursor(x, y +  doc/2 + 5 );
-    display.print(text);
-  } while (display.nextPage());
-}
-
 ```cpp
 *note:
 // chỉ cập nhật 1 phần màn hình:
@@ -91,7 +81,7 @@ display.firstPage();
   do {
     /*set up phần text*/
   } while (display.nextPage());
-
+```
 
 
 
