@@ -53,8 +53,43 @@ https://www.irfanview.com/
 Dùng tool: tải lcd-image-converter.zip
 -> giải nén -> mở file .exe
 -> open ảnh
+  - -> images/resize để crop ảnh
+  - file/convert chọn save as: *.c để lưu bitmap
+    ![Ảnh convert](assets/convert.png)
+  -> lấy phần bit map có cấu trúc như bên dưới paste vào code
 static const uint8_t image_data_vinmart[3050]  = {}
+*note:  display.drawBitmap(10, 0, image_data_vinmart, 200, 122, GxEPD_RED);
+=> GxEDP_RED nghĩa là những bit 1 trong bitmap sẽ có màu đỏ
+vị trí con trỏ bắt đầu in: (10,0)
+kích cỡ ảnh sẽ in: (200,122)
 
+### 6. Chỉnh sửa tùy chọn:
+
+void capnhat(String text, int x, int y, int ngang, int doc){
+  display.setPartialWindow(x, y, ngang, doc);
+  display.firstPage();
+  do {
+    display.setFont(&FreeMonoBold9pt7b);
+    display.setTextColor(GxEPD_BLACK);
+    display.setCursor(x, y +  doc/2 + 5 );
+    display.print(text);
+  } while (display.nextPage());
+}
+
+*note:
+// chỉ cập nhật 1 phần màn hình:
+display.setPartialWindow(x, y, ngang, doc);
+// cài màu chữ sẽ in
+display.setTextColor(GxEPD_BLACK);
+// đặt vị trí con trỏ bắt đầu in chữ (y + doc/2 +5 để con trỏ căn chữ giữa dòng)
+display.setCursor(x, y +  doc/2 + 5 );
+// in chữ lên màn (tạm thời lưu ở buffer)
+display.print(text);
+// cập nhật màn hình theo từng page (tránh tràn bộ nhớ)
+display.firstPage();
+  do {
+    /*set up phần text*/
+  } while (display.nextPage());
 
 
 
