@@ -46,16 +46,16 @@ const char* password = "12345678";
 Dùng tool sau để scale về tỉ lệ 250x122 vẫn giữ nguyên tất cả thông tin trên ảnh:
 https://www.irfanview.com/
 - image/resize:  
-  ![Ảnh 1](assets/irfran_1(1).png)
+  ![Ảnh 1](assets/ifran_1.png)
 - chỉnh width hoặc height (cạnh còn lại tính auto)  
-  ![Ảnh 2](assets/schematic.png)
+  ![Ảnh 2](assets/ifran_2.png)
 <br>
 5.2: Chuyển ảnh sang bitmap
   Tải lcd-image-converter.zip<br>
 -> giải nén -> mở file .exe-> open ảnh<br>
   - images/resize để crop ảnh  
-  - file/convert chọn save as: *.c để lưu bitmap<br>
-    ![Ảnh convert](assets/convert.png)  
+  - file/convert chọn save as: *.c để lưu bitmap <br>
+    ![Ảnh 2](assets/ifran_2.png) <br>
   -> lấy phần bit map có cấu trúc như bên dưới paste vào code<br>
 
 ```cpp static const uint8_t image_data_vinmart[3050]  = {} ```
