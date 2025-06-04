@@ -4,8 +4,8 @@ Dự án này sử dụng ESP32 để tạo một web server cho phép người 
 ## Ứng dụng: Bảng giá siêu tiết kiệm năng lượng
 E-paper chỉ cần kết nối esp32 khi cần thay đổi nội dung, không cần cấp năng lượng duy trì.
 
-Ảnh:
-Video:
+Ảnh: ![Ảnh 1](assets/ePaper.jpg)  
+Video: https://drive.google.com/file/d/1Qvd8p0cr2lFuas-rx_ihZpa2zyc7V528/view?usp=sharing
 
 ## 🚀 Tính năng
 
